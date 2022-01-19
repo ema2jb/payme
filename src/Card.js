@@ -1,4 +1,4 @@
-import {CardElement, useElements, useStripe} from '@stripe/react-stripe-js'
+import {PaymentElement, useElements, useStripe} from '@stripe/react-stripe-js'
 import React, {useState} from 'react'
 import './card.css'
 import axios from "axios"
@@ -61,7 +61,7 @@ const Card =()=>{
                     <input className="input" value={itemsCount} onChange={({target:{value}})=>setItemsCount(value)} type="number" name="items" id="items"/>
                     <p>{`you are paying ${itemsCount * 2} dollars`}</p>
                     <label htmlFor="card-element">Enter Card Details</label>
-                    <CardElement id="card-element" options={options} />
+                    <PaymentElement id="card-element" options={options} />
                     <button className="button">Pay</button>
                 </form>
             </div>
