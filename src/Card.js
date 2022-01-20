@@ -1,17 +1,17 @@
 import {PaymentElement, useElements, useStripe} from '@stripe/react-stripe-js'
-import React, {useState, useEffect} from 'react'
+import React, {useState, } from 'react'
 import axios from "axios"
-import cogoToast from 'cogo-toast';
+//import cogoToast from 'cogo-toast';
 
 
 const Card =()=>{
     const elements = useElements()
     const stripe = useStripe()
-    const [itemsCount, setItemsCount] = useState(1);
+    //const [itemsCount, setItemsCount] = useState(1);
 
     const [message, setMessage] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
-
+/*
     const stripePayment = async()=>{
       const clientSecret =  await axios.post('https://arcane-ocean-13863.herokuapp.com/create-payment-intent', {amount:2000}).then(res=>res.data.clientSecret)
       console.log(clientSecret)
@@ -87,7 +87,7 @@ const Card =()=>{
     cogoToast.success(`payment: ${paymentIntent.id} was successful`)
     */
     }
-    
+    /*
     const options = {
             style: {
               base: {
